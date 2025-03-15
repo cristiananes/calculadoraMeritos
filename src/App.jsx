@@ -3,12 +3,11 @@ import "./App.css";
 
 function App() {
   return (
-    <>
-      <div>
-        <h1>Gestión de Alquileres</h1>
-        <CalculadoraMeritos />
-      </div>
-    </>
+    <div className="container mt-5">
+      <h1 className="text-center mb-4">Gestión de Alquileres</h1>
+      {/* Añadir pareja en el formulario (pendiente de implementación) */}
+      <CalculadoraMeritos />
+    </div>
   );
 }
 

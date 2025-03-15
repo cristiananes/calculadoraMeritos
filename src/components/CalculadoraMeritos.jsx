@@ -71,119 +71,141 @@ const CalculadoraMeritos = () => {
   };
 
   return (
-    <div>
-      <h2>Calculadora de Méritos para Inquilinos</h2>
-      <label>
-        Historial de pagos impecable:{" "}
-        <select name="historialPagos" onChange={manejarCambio}>
+    <div className="card p-4 shadow-sm">
+      <h2 className="card-title text-center mb-4">
+        Calculadora de Méritos para Inquilinos
+      </h2>
+      <div className="form-group">
+        <label>Historial de pagos impecable:</label>
+        <select
+          name="historialPagos"
+          onChange={manejarCambio}
+          className="form-control"
+        >
           <option value={0}>No</option>
           <option value={1}>Sí</option>
         </select>
-      </label>
-      <br />
-      <label>
-        Ingresos mensuales (€):{" "}
+      </div>
+      <div className="form-group mt-3">
+        <label>Ingresos mensuales (€):</label>
         <input
           type="number"
           name="ingresosMensuales"
           value={datosFormulario.ingresosMensuales}
           onChange={manejarCambio}
+          className="form-control"
         />
-      </label>
-      <br />
-      <label>
-        Referencias positivas:{" "}
+      </div>
+      <div className="form-group mt-3">
+        <label>Referencias positivas:</label>
         <input
           type="number"
           name="referencias"
           value={datosFormulario.referencias}
           onChange={manejarCambio}
+          className="form-control"
         />
-      </label>
-      <br />
-      <label>
-        Años en el empleo:{" "}
+      </div>
+      <div className="form-group mt-3">
+        <label>Años en el empleo:</label>
         <input
           type="number"
           name="estabilidadLaboral"
           value={datosFormulario.estabilidadLaboral}
           onChange={manejarCambio}
+          className="form-control"
         />
-      </label>
-      <br />
-      <label>
-        ¿Tiene avalista?:{" "}
-        <select name="avalista" onChange={manejarCambio}>
+      </div>
+      <div className="form-group mt-3">
+        <label>¿Tiene avalista?:</label>
+        <select
+          name="avalista"
+          onChange={manejarCambio}
+          className="form-control"
+        >
           <option value={0}>No</option>
           <option value={1}>Sí</option>
         </select>
-      </label>
-      <br />
-      <label>
-        ¿No fumador?:{" "}
-        <select name="noFumador" onChange={manejarCambio}>
+      </div>
+      <div className="form-group mt-3">
+        <label>¿No fumador?:</label>
+        <select
+          name="noFumador"
+          onChange={manejarCambio}
+          className="form-control"
+        >
           <option value={0}>No</option>
           <option value={1}>Sí</option>
         </select>
-      </label>
-      <br />
-      <label>
-        ¿Sin mascotas?:{" "}
-        <select name="sinMascotas" onChange={manejarCambio}>
+      </div>
+      <div className="form-group mt-3">
+        <label>¿Sin mascotas?:</label>
+        <select
+          name="sinMascotas"
+          onChange={manejarCambio}
+          className="form-control"
+        >
           <option value={0}>No</option>
           <option value={1}>Sí</option>
         </select>
-      </label>
-      <br />
-      <label>
-        Años de contrato previo:{" "}
+      </div>
+      <div className="form-group mt-3">
+        <label>Años de contrato previo:</label>
         <input
           type="number"
           name="contratoPrevio"
           value={datosFormulario.contratoPrevio}
           onChange={manejarCambio}
+          className="form-control"
         />
-      </label>
-      <br />
-      <label>
-        Meses de depósito extra:{" "}
+      </div>
+      <div className="form-group mt-3">
+        <label>Meses de depósito extra:</label>
         <input
           type="number"
           name="deposito"
           value={datosFormulario.deposito}
           onChange={manejarCambio}
+          className="form-control"
         />
-      </label>
-      <br />
-      <label>
-        ¿Certificado de no deudas?:{" "}
-        <select name="noDeudas" onChange={manejarCambio}>
+      </div>
+      <div className="form-group mt-3">
+        <label>¿Certificado de no deudas?:</label>
+        <select
+          name="noDeudas"
+          onChange={manejarCambio}
+          className="form-control"
+        >
           <option value={0}>No</option>
           <option value={1}>Sí</option>
         </select>
-      </label>
-      <br />
-      <label>
-        Edad:{" "}
+      </div>
+      <div className="form-group mt-3">
+        <label>Edad:</label>
         <input
           type="number"
           name="edad"
           value={datosFormulario.edad}
           onChange={manejarCambio}
+          className="form-control"
         />
-      </label>
-      <br />
-      <label>
-        ¿Seguro de alquiler?:{" "}
-        <select name="seguroAlquiler" onChange={manejarCambio}>
+      </div>
+      <div className="form-group mt-3">
+        <label>¿Seguro de alquiler?:</label>
+        <select
+          name="seguroAlquiler"
+          onChange={manejarCambio}
+          className="form-control"
+        >
           <option value={0}>No</option>
           <option value={1}>Sí</option>
         </select>
-      </label>
-      <br />
-      <p>
-        Puntaje de méritos: <strong>{puntajeMeritos}</strong>
-      </p>
+      </div>
+      <div className="mt-4">
+        <p className="text-success font-weight-bold">
+          Puntaje de méritos: <strong>{puntajeMeritos}</strong>
+        </p>
+      </div>
     </div>
   );
 };
